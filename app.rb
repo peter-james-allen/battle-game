@@ -17,8 +17,13 @@ get '/death' do
   "you've reached the end!!"
 end
 
-get '/dogcat' do
-  "<div style='border: 2px dashed red'>
-    <img src = 'https://bit.ly/3pyLUpj'>
-  </div>"
+get '/random-cpet' do
+  @pet_names = 2.times.map { ["Amigo", "Misty", "Almond"].sample }.join(" and ")
+  erb(:index)
+end
+
+get '/named-pet' do
+  p params
+  @name = params[:name]
+  erb(:index)
 end
