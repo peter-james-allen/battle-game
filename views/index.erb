@@ -2,16 +2,8 @@
   <img src='https://bit.ly/3pyLUpj'>
 </div>
 
-<% if @name %>
-<h1> Our names are <%= "#{@name} & #{@name}!" %></h1>
+<% if @pet_name %>
+<h1> Our names are now <%= "#{@pet_name} & #{@pet_name}!" %></h1>
 <% else %>
 <h1> Our names are <%= @pet_names %></h1>
 <% end %>
-
-<form action="/named-pet">
-    <label for="name">New names:</label>
-    <input type="text" name="name">
-
-    <button type="button">Submit</button>
-    <button type="submit">Submit</button>
-</form>
