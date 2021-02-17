@@ -3,7 +3,9 @@
 </div>
 
 <% if @pet_name %>
-<h1> Our names are now <%= "#{@pet_name} & #{@pet_name}!" %></h1>
+    <h1> Our names are now <%= "#{@pet_name} & #{@pet_name}!" %></h1>
+<% elsif @pet_names %>
+    <h1> Our names are <%= "#{@pet_names}!" %></h1>
 <% else %>
-<h1> Our names are <%= @pet_names %></h1>
+    <h1> We don't have names yet :( </h1>
 <% end %>
