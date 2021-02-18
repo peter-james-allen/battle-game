@@ -25,7 +25,7 @@ end
 post '/named-pets' do
     p params
     @pet_name = params[:name]
-    erb(:index)
+    erb(:index) + erb(:pet_form)
 end
 
 get '/name-the-pets' do
