@@ -1,1 +1,12 @@
-<%= @player1 %> vs <%= @player2 %>
+<%= @player1.name %> vs <%= @player2.name %>
+<br>
+<br>
+<%= @player1.name %>: <%= @player1.HP %>HP
+<form action="/p1attack" method="post">
+    <button type="submit" name="p1_attack">Attack!</button>
+</form>
+<br>
+<%= @player2.name %>: <%= @player2.HP %>HP
+<br>
+<br>
+<%= @message %>
